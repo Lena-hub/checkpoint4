@@ -1,0 +1,14 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/css/admin/valeurs.css">
+{% endblock %}
+
+{% block title %}Ajouter{% endblock %}
+
+{% block body %} Ajouter une pizza</h1>
+
+    {{ include('admin/_form.html.twig') }}
+
+    <a href="{{ path('menu_index') }}">Retour</a>
+{% endblock %}

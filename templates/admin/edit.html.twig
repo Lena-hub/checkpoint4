@@ -1,0 +1,17 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/css/admin/valeurs.css">
+{% endblock %}
+
+{% block title %}Editer{% endblock %}
+
+{% block body %}
+    <h1> Modifier le menu {{ menu.titre }} </h1>
+
+    {{ include('/admin/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+    {{ include('admin/_delete_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+    <a id="return" href="{{ path('valeurs_index') }}"> <button class="btnRetour">Retour </button></a>
+{% endblock %}

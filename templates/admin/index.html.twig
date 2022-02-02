@@ -1,0 +1,33 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/menuadmin.css">
+{% endblock %}
+
+{% block title %}Mes Pizza{% endblock %}
+
+{% block body %}
+    <h1>Mes pizzas</h1>
+
+    <div class="values">
+
+    {% for menu in menus %}
+        <div class="value-content">
+            <div class="value-content-text">
+                <h3>Titre</h3>
+                <p> {{ menu.titre }} </p>
+                <div>
+                   <a href="{{ path('menu_edit', {'id': menu.id}) }}"> <button class="btnRetour"> Modifier </button></a>
+                </div>
+            </div>
+            <div class="value-content-img">
+                <img class="images" src="{{ vich_uploader_asset(menu, "photoFile") }}"
+                alt="{{ menu.titre }}" width="200" height="300">
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+
+    </div>
+{% endblock %}

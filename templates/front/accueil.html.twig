@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PizzOnFire{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/accueil.css">
+    <link rel="stylesheet" href="/assets/base.css">
+{% endblock %}
+
+{% block body %}
+   <div class="imgH1">
+      <div class="motderoulants">
+        <h2>
+            <span>
+              <div class="rw-words rw-words-1">
+                <span>Pâte maison</span>
+                <span>Produits frais</span>
+                <span>Produits bio</span>
+                <span>Vins Italiens</span>
+              </div>
+           </span>
+      </h2>
+   </div>
+ </div>
+    <p class="textaccueil">
+        Venez découvrir nos pizzas cuites au feu de bois !<br>
+        Pâte fraîche pétrie quotidiennement.
+        Sauce tomate préparée maison par le chef.<br>
+        Légumes frais de la Femrme du soleil, marché de Talensac à Nantes.<br>
+        Goûtez la différence !<br><br>
+        Des pizzas seulement à emporter, réservation par téléphone.
+    </p>
+    <div class="triptyque">
+        <div class="photoBas"><img class="photoBas" width="100%" height="100%" src="\uploads\image (1).jpg"></div>
+        <div class="photoBas"><img class="photoBas" width="100%" height="100%" src="\uploads\image (2).jpg"></div>
+        <div class="photoBas"><img class="photoBas"width="100%" height="100%" src="\uploads\image (3).jpg"></div>
+    </div>
+    <div class="triptyque2">
+        <div class="photoBas"><img class="photoBas" width="100%" height="100%" src="\uploads\image (4).jpg"></div>
+        <div class="photoBas"><img class="photoBas" width="100%" height="100%" src="\uploads\image (5).jpg"></div>
+        <div class="photoBas"><img class="photoBas"width="100%" height="100%" src="\uploads\image (6).jpg"></div>
+    </div>
+        <p class="textaccueil">
+        Venez découvrir nos pizzas cuites au feu de bois !<br>
+        Pâte fraîche pétrie quotidiennement.
+        Sauce tomate préparée maison par le chef.<br>
+        Légumes frais de la Femrme du soleil, marché de Talensac à Nantes.<br>
+        Goûtez la différence !<br><br>
+        Des pizzas seulement à emporter, réservation par téléphone.
+    </p>
+    <a href="{{ path('menu') }}"><button class="btnG2">Nos pizzas & vins </button></a>
+{% endblock %}

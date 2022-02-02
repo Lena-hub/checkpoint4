@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PizzOnFire{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/contact.css">
+    <link rel="stylesheet" href="/assets/base.css">
+{% endblock %}
+
+{% block body %}
+<div class="imgcontact">
+    <div class="blockcontact">
+        <p class="textcontact">
+        Les réservation se font uniquement par téléphone<br><br>
+        06.00.00.00.00
+        </p>
+    </div>
+ </div>
+    <p class="textmerci">
+    Venez découvrir nos pizzas cuites au feu de bois !<br>
+    Pâte fraîche pétrie quotidiennement.
+    Sauce tomate préparée maison par le chef.<br>
+    Légumes frais de la Femrme du soleil, marché de Talensac à Nantes.<br>
+    Goûtez la différence !<br><br>
+    Des pizzas seulement à emporter, réservation par téléphone.
+</p>
+<a href="{{ path('menu') }}"><button class="btnG2">Retour aux pizzas</button></a>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Bienvenue{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </head>
+    {% block header %}
+        <div class="header">
+                <a href="{{ path('menu') }}"><button class="btnG">Pizzas</button></a>
+                <a href="{{ path('accueil') }}"><img class="logo" src="/uploads/pizz.png" alt="logo PizzOnFire"></a>
+                <a href="{{ path('contact') }}"><button class="btnD">Contact</button></a>
+        </div>
+		{% endblock %}
+    <body>
+        {% block body %}{% endblock %}
+
+          {% block footer %}
+        <div class="footer">
+            <p class="textfooter">1 rue du Four en flammes<br>44000 Nantes<p>
+            <i class="fab fa-facebook"></i>
+            <p class="textfooter">06.00.00.00.00<p>
+        </div>
+		{% endblock %}
+    </body>
+</html>
