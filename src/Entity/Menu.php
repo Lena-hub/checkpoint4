@@ -25,6 +25,9 @@ class Menu
     #[ORM\Column(type: 'string', length: 255)]
     private $texte2;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $prix;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +77,18 @@ class Menu
     public function setTexte2(string $texte2): self
     {
         $this->texte2 = $texte2;
+
+        return $this;
+    }
+
+    public function getPrix(): ?string
+    {
+        return $this->prix;
+    }
+
+    public function setPrix(string $prix): self
+    {
+        $this->prix = $prix;
 
         return $this;
     }
