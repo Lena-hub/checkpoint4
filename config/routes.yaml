@@ -7,6 +7,6 @@ kernel:
     type: annotation
 
 
-admin_logout:
-      path: /admin/logout
+app_logout:
+      path: /logout
       methods: GET

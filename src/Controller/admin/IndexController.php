@@ -15,7 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class IndexController extends AbstractController
 {
     /**
-     * @Route("/index", name="menu_index", methods={"GET"})
+     * @Route("/index", name="index", methods={"GET"})
      */
     public function index(MenuRepository $menuRepository): Response
     {

@@ -29,8 +29,8 @@ security:
                 check_path: login
                 enable_csrf: true
             logout:
-                path: admin_login
-                target: admin_login
+                path: app_logout
+                target: login
                 invalidate_session: false
 
             # activate different ways to authenticate
