@@ -1,4 +1,4 @@
-{# <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8">
@@ -21,7 +21,7 @@
                 <div class='container'>
                     <h1 class='connexion'>Connexion</h1>
                     <div><i class="fas fa-user"></i></div>
-                    <form action="{{ path('admin_login') }}" method="post">
+                    <form action="{{ path('login') }}" method="post">
                         <div class='field'>
                             <label for="username">Identifiant:</label>
                             <input type="text" id="username" name="_username" value="{{ last_username }}"/>
@@ -30,7 +30,7 @@
                             <label for="password">Mot de passe:</label>
                             <input type="password" id="password" name="_password"/>
                         </div>
-                        <input type="hidden" name="_target_path" value="/admin/home"/>
+                        <input type="hidden" name="_target_path" value="/home"/>
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                         <button class='btnRetour' type="submit">Se connecter</button>
                 </div>
@@ -41,4 +41,4 @@
         {% endblock %}
 
     </body>
- #}
+
