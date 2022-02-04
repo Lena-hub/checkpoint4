@@ -9,20 +9,21 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LoginController extends AbstractController
 {
-    /**
-    * @Route("/login", name="admin_login")
-    */
-    public function index(AuthenticationUtils $authenticationUtils): Response
-    {
-        // get the login error if there is one
-        $error = $authenticationUtils->getLastAuthenticationError();
+    // /**
+    // * @Route("/login", name="admin_login" , methods={"GET" , "POST"})
+    // */
+    // public function index(AuthenticationUtils $authenticationUtils): Response
+    // {
+    //     // get the login error if there is one
+    //     $error = $authenticationUtils->getLastAuthenticationError();
+    //     dump($error);
 
-        // last username entered by the user
-        $lastUsername = $authenticationUtils->getLastUsername();
+    //     // last username entered by the user
+    //     $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('admin/login.html.twig', [
-            'last_username' => $lastUsername,
-            'error'         => $error,
-        ]);
-    }
+    //     return $this->render('admin/login.html.twig', [
+    //         'last_username' => $lastUsername,
+    //         'error'         => $error,
+    //     ]);
+    // }
 }

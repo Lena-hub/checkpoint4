@@ -14,6 +14,9 @@ class MenuType extends AbstractType
         $builder
             ->add('image')
             ->add('texte')
+            ->add('titre')
+            ->add('texte2')
+            ->add('prix')
         ;
     }
 

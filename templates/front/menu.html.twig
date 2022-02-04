@@ -3,63 +3,66 @@
 {% block title %}PizzOnFire{% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="/assets/menu.css">
-    <link rel="stylesheet" href="/assets/base.css">
+    <link rel="stylesheet" href="/assets/front/menu.css">
+    <link rel="stylesheet" href="/assets/front/base.css">
 {% endblock %}
 
 {% block body %}
 <div class="blocks">
-{% for menu in menus %}
-  <div class="block1">
-    <div class="bockIMGtitre">
-        <h2> {{ menu.titre }} </h2>
-        <img class="IMGmenu" src="{{ menu.image }}" alt="">
-    </div>
-     <div class="blockTextes">
-         <p> {{ menu.texte }} </p>
-          <p> {{ menu.texte2 }} </p>
-      </div>
-   </div>
-</div>
-{% endfor %}
-{% for menu in menus %}
-<div class="block2">
-    <div class="bockIMGtitre">
-        <h2 id="noir"> {{ menu.titre }} </h2>
-        <img class="IMGmenu" src="{{ menu.image }}" alt="">
-    </div>
-     <div class="blockTextes">
-         <p id="noir"> {{ menu.texte }} </p>
-          <p id="noir"> {{ menu.texte2 }} </p>
-      </div>
-   </div>
-  </div>
-  {% endfor %}
-{% for menu in menus %}
-        <div class="block3">
-    <div class="bockIMGtitre">
-        <h2> {{ menu.titre }} </h2>
-        <img class="IMGmenu" src="{{ menu.image }}" alt="">
-    </div>
-     <div class="blockTextes">
-         <p> {{ menu.texte }} </p>
-          <p> {{ menu.texte2 }} </p>
-      </div>
-   </div>
-  </div>
-  {% endfor %}
-{% for menu in menus %}
-  <div class="block4">
-    <div class="bockIMGtitre">
-        <h2 id="noir"> {{ menu.titre }} </h2>
-        <img class="IMGmenu" src="{{ menu.image }}" alt="">
-    </div>
-     <div class="blockTextes">
-         <p id="noir"> {{ menu.texte }} </p>
-          <p id="noir"> {{ menu.texte2 }} </p>
-      </div>
-   </div>
-  </div>
-  {% endfor %}
+    {% for menu in menus|slice(0, 1) %}
+    <div class="block1">
 
+        <div class="bockIMGtitre">
+            <h2> {{ menu.titre }} </h2>
+            <img class="IMGmenu" src="{{ menu.image }}" alt="">
+        </div>
+        <div class="blockTextes">
+            <p> {{ menu.texte }} </p>
+            <p> {{ menu.texte2 }} </p>
+            <p> {{ menu.prix }} </p>
+        </div>
+    </div>
+    {% endfor %}
+    {% for menu in menus|slice(1, 2) %}
+    <div class="block2">
+
+        <div class="bockIMGtitre">
+            <h2 id="noir"> {{ menu.titre }} </h2>
+            <img class="IMGmenu" src="{{ menu.image }}" alt="">
+        </div>
+        <div class="blockTextes">
+            <p id="noir"> {{ menu.texte }} </p>
+            <p id="noir"> {{ menu.texte2 }} </p>
+            <p id="noir"> {{ menu.prix }} </p>
+        </div>
+    </div>
+    {% endfor %}
+    {% for menu in menus|slice(3, 2) %}
+    <div class="block3">
+        <div class="bockIMGtitre">
+            <h2> {{ menu.titre }} </h2>
+            <img class="IMGmenu" src="{{ menu.image }}" alt="">
+        </div>
+        <div class="blockTextes">
+            <p> {{ menu.texte }} </p>
+            <p> {{ menu.texte2 }} </p>
+            <p> {{ menu.prix }} </p>
+        </div>
+    </div>
+    {% endfor %}
+
+     {% for menu in menus|slice(5, 2) %}
+    <div class="block4">
+        <div class="bockIMGtitre">
+            <h2 id="noir"> {{ menu.titre }} </h2>
+            <img class="IMGmenu" src="{{ menu.image }}" alt="">
+        </div>
+        <div class="blockTextes">
+            <p id="noir"> {{ menu.texte }} </p>
+            <p id="noir"> {{ menu.texte2 }} </p>
+            <p id="noir"> {{ menu.prix }} </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

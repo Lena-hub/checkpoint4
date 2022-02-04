@@ -1,0 +1,56 @@
+.menus {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu {
+    margin: 1rem;
+    border-radius: 10px;
+    border:solid;
+    width: 500px;
+    padding-bottom: 20px;
+}
+
+.menuHead {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.blockmenu{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+}
+
+.images {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 200px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+.contain {
+    object-fit: cover;
+}
+.blockTexte {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.images{
+    object-fit:cover;
+}
+
+h2{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.name{
+    margin-top: 50px;
+    margin-left: 50px;
+}

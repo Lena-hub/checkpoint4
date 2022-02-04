@@ -19,7 +19,8 @@ class UserFixtures extends Fixture
         $user = new User();
         $user->setUsername('admin');
         $user->setPassword($this->passwordHasher->hashPassword($user, 'admin'));
-        $this->addReference('user1', $user);
+        $user->setRoles(['ROLE_ADMIN']);
+        $this->addReference('user', $user);
 
         $manager->persist($user);
 

@@ -1,0 +1,18 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/admin/base.css">
+{% endblock %}
+
+{% block title %}Espace administrateur{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Hey ! <br><br> T'as des nouvelles pizz' en poche ? <br> Modifie ton menu !</h1>
+
+      <a href="{{ path('menu_index') }}"><button class="btnRetour"> Modifier</button></a>
+      <a href="{{ path('admin_logout') }}"> <button class="btnRetour"> Déconnexion</button></a>
+</div>
+
+{% endblock %}

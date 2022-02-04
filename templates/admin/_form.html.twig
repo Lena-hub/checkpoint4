@@ -1,7 +1,7 @@
 {{ form_start(form) }}
-<div class="value-edit">
+<div class="menuEdit">
     <div class="form-control">
-        <div class="value-label">{{ form_label(form.nom) }}</div>
+        <div class="menuLabel">{{ form_label(form.nom) }}</div>
             <div> {{ form_widget(form.nom, {'attr': {'class': 'widget'}}) }} </div>
             <div class="form-error">
                 {{ form_errors(form.nom) }}
@@ -18,11 +18,10 @@
                 {{ form_errors(form.texte) }}
             </div>
     </div>
-
     <div class="form-block-bottom">
         <div class="block-upload">
             <div>
-                <div class="value-label label-file"> {{ form_label(form.photoFile, 'Photo pizza') }}</div>
+                <div class="MenuLabel labelFile"> {{ form_label(form.photoFile, 'Photo pizza') }}</div>
                 <div class="input-file"> {{ form_widget(form.photoFile) }} </div>
 
                 <div class="form-error">
@@ -30,15 +29,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="block-img">
-            <div class="form-picto"> <img src="{{ vich_uploader_asset(menu, "pictoFile") }}"
-            alt="{{ menu.texte }}" width="100">  </div>
-
-            <div class="filtre-img"> <img src="{{ vich_uploader_asset(menu, "photoFile") }}"
-            alt="{{ menu.texte }}" width="100" height="150"> </div>
-        </div>
-
     </div>
 
     <div id="btn-form">
